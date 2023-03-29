@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Masked_Rom")(type "KiCad")(uri "${KIPRJMOD}/Masked_Rom.kicad_sym")(options "")(descr ""))
+)
