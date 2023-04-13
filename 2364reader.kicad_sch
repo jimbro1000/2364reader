@@ -830,31 +830,6 @@
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 139.7 96.52 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 58b1ad58-4010-41c7-b12a-2856832e4d35)
-    (property "Reference" "#PWR05" (at 135.89 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 143.51 97.155 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 139.7 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 139.7 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0364b9d7-af6c-4784-8d49-7911bdddbce3))
-    (instances
-      (project "2364reader"
-        (path "/ce74d7da-00b6-4f07-8114-218744816fcc"
-          (reference "#PWR05") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 95.25 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 68f51192-181d-4b50-9329-7c71a8f1c227)
@@ -998,6 +973,31 @@
       (project "2364reader"
         (path "/ce74d7da-00b6-4f07-8114-218744816fcc"
           (reference "#PWR02") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 139.7 96.52 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid fe8a2a42-4a10-4b05-90fa-f9b0f59c5463)
+    (property "Reference" "#PWR05" (at 146.05 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 143.51 97.155 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "" (at 139.7 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 139.7 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 297847e9-3427-4d71-9b87-ebf580894633))
+    (instances
+      (project "2364reader"
+        (path "/ce74d7da-00b6-4f07-8114-218744816fcc"
+          (reference "#PWR05") (unit 1)
         )
       )
     )

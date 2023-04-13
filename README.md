@@ -15,13 +15,34 @@ a corrupted ROM image, at worst you could damage the
 ROM. Most programmers will protect themselves from
 damage but do not assume this is the case.
 
+## Why do you need it?
+
+While masked roms are generally robust they do fail,
+this adapter provides a simple way to read the rom
+image using an eprom programmer. In practical terms
+this is a way to verify a real rom against a known
+rom image. Or maybe to generate a new rom image where
+one doesn't exist.
+
+Some modern recreations of old 8-bit computers have
+opted to use 27/28C64s instead of the original masked
+roms in the name of avoiding unobtainable parts. This
+adapter can also be used to fit original roms. If a
+larger capacity eprom is used (eg. 27C256) this 
+adapater will not really help.
+
 ## BOM
 
-| Position | Component                   | Quantity |
-|:---------|:----------------------------|:--------:|
-| U1       | 24 pin dip socket 15mm wide | 1        |
-| U2       | 1x14 pin male header        | 2        |
-| JP1      | 1x3 pin male header         | 1        |
+| Position | Component                                | Quantity |
+|:---------|:-----------------------------------------|:--------:|
+| U1       | 24 pin dip socket 15mm wide              | 1        |
+| U2       | 1x14 pin 2.54mm pitch male header        | 2        |
+| JP1      | 1x3 pin 2.54mm pitch male header         | 1        |
+| JP1      | 2.54mm jumper                            | 1        |
+
+note: it is highly recommended to use round (turned) pin headers for
+U2 instead of the bulkier square pin versions as these are kinder to
+sockets
 
 ## Assembly
 
@@ -50,6 +71,18 @@ clean fitting of a socket
 5. Read the rom as normal
 
 ### Reading a 2332 rom (4K bytes/32K bits)
+
+While I intended the jumper to gracefully handle A12
+addressing when reading a 2332 but in the current
+design it gives unexpected results. Until fixed the
+steps for reading a 2332 are the same as for the 8K 2364. 
+The end result is that the upper 4K are read as $FF
+instead of repeating the image.
+
+A change to the board has been made to circumvent the 
+problem but is not tested.
+
+#### Ignore until fixed:
 
 1. Move the jumper to the 4k side of the board
 
